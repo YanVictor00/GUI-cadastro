@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="758.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cadastrojavafx.telas.Cliente">
+<AnchorPane prefHeight="758.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label alignment="CENTER" layoutY="34.0" prefHeight="50.0" prefWidth="1005.0" text="CADASTRO DE CLIENTES" textAlignment="CENTER">
          <font>
@@ -52,8 +52,8 @@
                </font>
             </Label>
             <TextField GridPane.columnIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <RadioButton mnemonicParsing="false" prefHeight="38.0" prefWidth="117.0" selected="true" text="MASCULINO" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <RadioButton mnemonicParsing="false" prefHeight="38.0" prefWidth="117.0" selected="true" text="MASCULINO" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="30.0" />
                </GridPane.margin>
@@ -64,7 +64,7 @@
                   <ToggleGroup fx:id="SEXO" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="304.0" text="FEMININO" textAlignment="RIGHT" toggleGroup="$SEXO" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <RadioButton alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="304.0" text="FEMININO" textAlignment="RIGHT" toggleGroup="$SEXO" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="200.0" />
                </GridPane.margin>
