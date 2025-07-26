@@ -15,16 +15,15 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="758.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="758.0" prefWidth="1006.0" style="-fx-background-color: #001F3F;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cadastrojavafx.Cliente.ClienteController">
    <children>
-      <Label alignment="CENTER" layoutY="34.0" prefHeight="50.0" prefWidth="1005.0" text="CADASTRO DE CLIENTES" textAlignment="CENTER">
+      <Label alignment="CENTER" layoutX="1.0" layoutY="34.0" prefHeight="50.0" prefWidth="1005.0" text="CADASTRO DE CLIENTES" textAlignment="CENTER" textFill="GOLD" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <font>
-            <Font name="Impact" size="39.0" />
+            <Font name="AniMe Vision - MB_EN" size="39.0" />
          </font>
       </Label>
-      <Separator layoutY="106.0" prefHeight="0.0" prefWidth="1006.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <GridPane layoutX="252.0" layoutY="191.0" prefHeight="196.0" prefWidth="486.0">
+      <Separator layoutY="106.0" prefHeight="0.0" prefWidth="1006.0" style="-fx-background-color: #FF69B4;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <GridPane alignment="CENTER" layoutX="252.0" layoutY="191.0" prefHeight="196.0" prefWidth="486.0" AnchorPane.bottomAnchor="370.79999999999995" AnchorPane.leftAnchor="251.60000000000002" AnchorPane.rightAnchor="267.6" AnchorPane.topAnchor="191.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.20001220703125" minWidth="10.0" prefWidth="94.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.8" minWidth="10.0" prefWidth="392.8" />
@@ -34,67 +33,94 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label alignment="CENTER" prefHeight="18.0" prefWidth="130.0" text="NOME:" textAlignment="CENTER">
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="130.0" text="NOME:" textAlignment="CENTER" textFill="#ff007f">
                <font>
-                  <Font name="System Bold" size="18.0" />
+                  <Font name="AniMe Vision - MB_EN" size="18.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="18.0" prefWidth="130.0" text="IDADE:" textAlignment="CENTER" GridPane.rowIndex="1">
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="130.0" text="SEXO:" textAlignment="CENTER" textFill="#ff007f" GridPane.rowIndex="1">
                <font>
-                  <Font name="System Bold" size="18.0" />
+                  <Font name="AniMe Vision - MB_EN" size="18.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="18.0" prefWidth="130.0" text="SEXO:" textAlignment="CENTER" GridPane.rowIndex="2">
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="130.0" text="IDADE:" textAlignment="CENTER" textFill="#ff007f" GridPane.rowIndex="2">
                <font>
-                  <Font name="System Bold" size="18.0" />
+                  <Font name="AniMe Vision - MB_EN" size="18.0" />
                </font>
             </Label>
-            <TextField GridPane.columnIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <RadioButton mnemonicParsing="false" prefHeight="38.0" prefWidth="117.0" selected="true" text="MASCULINO" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <TextField fx:id="tf_nome" style="-fx-background-color: #00FFFF; -fx-alignment: LEFT-CENTER;" GridPane.columnIndex="1">
+               <font>
+                  <Font name="AniMe Vision - MB_EN" size="14.0" />
+               </font></TextField>
+            <TextField fx:id="tf_idade" style="-fx-background-color: #00FFFF; -fx-alignment: #FFF8DC;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="AniMe Vision - MB_EN" size="14.0" />
+               </font></TextField>
+            <RadioButton fx:id="rb_m" mnemonicParsing="false" prefHeight="38.0" prefWidth="117.0" selected="true" text="MASCULINO" textFill="GOLD" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets left="30.0" />
                </GridPane.margin>
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
                <toggleGroup>
                   <ToggleGroup fx:id="SEXO" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="304.0" text="FEMININO" textAlignment="RIGHT" toggleGroup="$SEXO" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <RadioButton fx:id="rb_f" alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="304.0" text="FEMININO" textAlignment="RIGHT" textFill="GOLD" toggleGroup="$SEXO" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets left="200.0" />
                </GridPane.margin>
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
             </RadioButton>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="70.0" text="SALVAR" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button fx:id="bt_salvar" mnemonicParsing="false" onAction="#mostrarNome" prefHeight="35.0" prefWidth="85.0" style="-fx-background-color: #00FFFF;" text="SALVAR" textFill="#001f3f" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <GridPane.margin>
-                  <Insets left="50.0" />
+                  <Insets />
                </GridPane.margin>
+               <font>
+                  <Font name="AniMe Vision - MB_EN" size="12.0" />
+               </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="70.0" text="EDITAR" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button fx:id="bt_editar" mnemonicParsing="false" prefHeight="35.0" prefWidth="85.0" style="-fx-background-color: #00FFFF;" text="EDITAR" textFill="#001f3f" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <GridPane.margin>
-                  <Insets left="176.0" />
+                  <Insets left="150.0" />
                </GridPane.margin>
+               <font>
+                  <Font name="AniMe Vision - MB_EN" size="12.0" />
+               </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="70.0" text="DELETAR" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button fx:id="bt_deletar" mnemonicParsing="false" prefHeight="35.0" prefWidth="90.0" style="-fx-background-color: #00FFFF;" text="DELETAR" textFill="#001f3f" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <GridPane.margin>
-                  <Insets left="300.0" />
+                  <Insets left="295.0" />
                </GridPane.margin>
+               <font>
+                  <Font name="AniMe Vision - MB_EN" size="12.0" />
+               </font>
             </Button>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="130.0" text="TEL:" textAlignment="CENTER" textFill="#ff007f" GridPane.rowIndex="3">
+               <font>
+                  <Font name="AniMe Vision - MB_EN" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tf_tel" prefHeight="30.0" prefWidth="318.0" style="-fx-background-color: #00FFFF; -fx-alignment: #FFF8DC;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="AniMe Vision - MB_EN" size="14.0" />
+               </font>
+            </TextField>
          </children>
       </GridPane>
-      <TableView layoutX="268.0" layoutY="413.0" prefHeight="290.0" prefWidth="547.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+      <TableView fx:id="tv_clientes" layoutX="268.0" layoutY="413.0" prefHeight="290.0" prefWidth="547.0" style="-fx-background-color: #FFF8DC;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
         <columns>
-          <TableColumn prefWidth="139.20001220703125" text="ID" />
-          <TableColumn prefWidth="134.39996337890625" text="NOME" />
-            <TableColumn prefWidth="136.0" text="IDADE" />
-            <TableColumn prefWidth="141.60009765625" text="SEXO" />
+          <TableColumn fx:id="tc_id" prefWidth="139.20001220703125" style="-fx-background-color: #FFD700;" text="ID" />
+          <TableColumn fx:id="tc_nome" prefWidth="134.39996337890625" style="-fx-background-color: #FFD700;" text="NOME" />
+            <TableColumn fx:id="tc_idade" prefWidth="136.0" style="-fx-background-color: #FFD700;" text="IDADE" />
+            <TableColumn fx:id="tc_sexo" prefWidth="141.60009765625" style="-fx-background-color: #FFD700;" text="SEXO" />
+            <TableColumn fx:id="tc_tel" prefWidth="141.60009765625" style="-fx-background-color: #FFD700;" text="TELEFONE" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
